@@ -28,6 +28,18 @@ public class Main {
         for (String kelime : kelimeSayilari.keySet()) {
             System.out.println(kelime + " : " + kelimeSayilari.get(kelime));
         }
+        int maxCount = 0;
+        String mostFrequentWord = "";
+
+        for (String kelime : kelimeSayilari.keySet()) {
+            int count = kelimeSayilari.get(kelime);
+            if (count > maxCount) {
+                maxCount = count;
+                mostFrequentWord = kelime;
+            }
+        }
+        System.out.println("En çok tekrar eden kelime : "+ mostFrequentWord + " (" + maxCount + " kez)");
+
 
     }
 }
